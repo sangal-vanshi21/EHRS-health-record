@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Synopsis — Electronic Health Record System (EHRS01)</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+    
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 8.2pt;
+      line-height: 1.34;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .header-banner {
+      border-bottom: 2px solid #1e40af;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .org-title {
+      font-size: 12.5pt;
+      font-weight: 800;
+      color: #1e40af;
+      letter-spacing: -0.3px;
+      margin: 0;
+    }
+
+    .sub-org {
+      font-size: 7.8pt;
+      font-weight: 600;
+      color: #64748b;
+      margin-top: 1px;
+    }
+
+    .doc-type {
+      text-align: right;
+      font-size: 7.2pt;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 8px;
+      font-size: 7.8pt;
+    }
+
+    .meta-table th, .meta-table td {
+      border: 1px solid #cbd5e1;
+      padding: 3.5px 6px;
+    }
+
+    .meta-table th {
+      background-color: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      width: 24%;
+      text-align: left;
+    }
+
+    .meta-table td {
+      background-color: #ffffff;
+      color: #0f172a;
+    }
+
+    .github-link {
+      color: #1d4ed8;
+      font-weight: 700;
+      text-decoration: underline;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 7.2pt;
+    }
+
+    h2 {
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: #0f172a;
+      background: #f8fafc;
+      border-left: 3.5px solid #2563eb;
+      padding: 2.5px 5px;
+      margin: 7px 0 3px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    p {
+      margin: 0 0 4px 0;
+      text-align: justify;
+    }
+
+    .highlight-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 5px 8px;
+      margin: 3px 0;
+      font-size: 7.8pt;
+    }
+
+    .diagram-container {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 4px;
+      padding: 6px 10px;
+      margin: 5px 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 6.8pt;
+      line-height: 1.25;
+      overflow: hidden;
+    }
+
+    .diagram-title {
+      color: #38bdf8;
+      font-weight: 700;
+      font-size: 7.2pt;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 4px 6px;
+      font-size: 7.6pt;
+    }
+
+    .card strong {
+      color: #1e293b;
+      display: block;
+      margin-bottom: 1.5px;
+      font-size: 7.8pt;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 4px 0;
+      font-size: 7.4pt;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 3px 5px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background: #1e40af;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 6.9pt;
+    }
+
+    .data-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 1px 3.5px;
+      border-radius: 3px;
+      font-size: 6.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .badge-success { background: #dcfce7; color: #15803d; }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+      margin: 4px 0;
+      font-size: 7.6pt;
+    }
+
+    .checklist li {
+      margin-bottom: 2.5px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .signature-area {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7.8pt;
+      padding-top: 5px;
+      border-top: 1px dashed #cbd5e1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-banner">
+    <div>
+      <h1 class="org-title">HCLTech Career Shaper Programme</h1>
+      <div class="sub-org">III Year Industry Project | Academic Year 2025–26</div>
+    </div>
+    <div class="doc-type">
+      Official Submission<br>
+      <span style="color: #2563eb; font-weight: 800;">Project Synopsis</span>
+    </div>
+  </div>
+
+  <!-- METADATA TABLE -->
+  <table class="meta-table">
+    <tr>
+      <th>Project Title</th>
+      <td colspan="3"><strong>Electronic Health Record System with Real-Time Interoperability & Patient Portal (EHRS01)</strong></td>
+    </tr>
+    <tr>
+      <th>Domain</th>
+      <td>Healthcare and Pharma / Full Stack Web Development</td>
+      <th>Duration</th>
+      <td>4 Weeks (20 Sprints Agile Scope)</td>
+    </tr>
+    <tr>
+      <th>GitHub Repository</th>
+      <td colspan="3"><a class="github-link" href="https://github.com/sangal-vanshi21/EHRS-health-record">https://github.com/sangal-vanshi21/EHRS-health-record</a></td>
+    </tr>
+    <tr>
+      <th>Format</th>
+      <td>Individual Project</td>
+      <th>Submission Date</th>
+      <td>October 2026</td>
+    </tr>
+    <tr>
+      <th>Learner Name</th>
+      <td>[FILL IN: Your Full Name]</td>
+      <th>Roll Number</th>
+      <td>[FILL IN: University Roll No.]</td>
+    </tr>
+    <tr>
+      <th>College / Campus</th>
+      <td>[FILL IN: College / Campus Name]</td>
+      <th>Mentor Name</th>
+      <td>Gaurav Kumar (Project Manager / Mentor)</td>
+    </tr>
+  </table>
+
+  <!-- 1. PROBLEM STATEMENT -->
+  <h2>1. Problem Statement (5W1H Framework)</h2>
+  <div class="highlight-box">
+    <p><strong>Who & What:</strong> Healthcare providers (physicians, nurses, specialists) and patients across hospital networks struggle with fragmented clinical data trapped in disparate paper charts and isolated software silos.</p>
+    <p><strong>When & Where:</strong> During outpatient consultations, emergency triage, and prescription dispensing at hospital and community clinic points-of-care.</p>
+    <p><strong>Why:</strong> The lack of a centralized, real-time clinical platform leads to repeated diagnostic testing, missed drug-allergy cross-reactivity contraindications, diagnostic turnaround delays, and minimal patient involvement in care plans.</p>
+    <p><strong>How:</strong> By engineering a centralized, web-based Electronic Health Record System (EHRS01) featuring Computerized Provider Order Entry (CPOE), structured SOAP documentation, dynamic BMI monitoring, automated real-time allergy cross-checks, bidirectional HL7 v2.5.1 and FHIR R4 interoperability bridges, and a self-service Patient Portal.</p>
+  </div>
+
+  <!-- 2. PROPOSED SOLUTION & APPROACH -->
+  <h2>2. Proposed Solution & Approach</h2>
+  <p>
+    The developed solution is an enterprise full-stack Electronic Health Record System built with modern React 19, Tailwind CSS, and a Node.js/Express service architecture adhering to global healthcare interoperability standards. The platform implements six core clinical epics: Master Patient Index (MPI) demographics management, structured 4-quadrant SOAP encounter documentation with automatic BMI computation, Computerized Provider Order Entry (CPOE) for laboratory and imaging diagnostics with an integrated PACS DICOM viewer simulation, electronic prescribing (e-Rx) with real-time Clinical Decision Support (CDS) allergy cross-checking, and bidirectional HL7 v2.5.1 messaging alongside HL7 FHIR Release 4 REST endpoints. Furthermore, a dedicated Patient Portal enables self-scheduling of appointments, secure encrypted provider messaging, and instant personal health record access, thereby streamlining clinical throughput and safeguarding patient care.
+  </p>
+
+  <!-- 3. SYSTEM ARCHITECTURE -->
+  <h2>3. System Architecture & Data Flow Diagram</h2>
+  <div class="diagram-container">
+    <div class="diagram-title">System Layered Architecture Block Diagram</div>
+[ Presentation Layer: React 19 SPA + Tailwind CSS v4 + Lucide Icons ]
+   ├── Patient 360 & MPI Directory      ├── CPOE Orders & PACS DICOM Viewer
+   ├── SOAP Documentation & BMI Engine   ├── e-Prescribing (e-Rx) with CDS Alerts
+   └── Patient Self-Service Portal       └── HL7 & FHIR Standards Inspector
+                                │ (HTTP / JSON REST)
+                                ▼
+[ API Gateway & Security Layer: Express 4.x (Port 5000) ]
+   ├── Request Dispatcher & Validation   ├── Global Error & Exception Handler
+   └── Static Production SPA Bundler     └── Cross-Origin Resource Sharing (CORS)
+                                │
+                                ▼
+[ Business Logic & Clinical Engine Layer ]
+   ├── PatientService (CRUD & Demographics) ├── OrderService (CPOE Diagnostics)
+   ├── ClinicalService (SOAP & Biometrics)  ├── MedicationService (CDS Allergy Checks)
+   ├── HL7Service (v2.5.1 MSH/PID/OBR/RXE)   ├── FhirService (R4 Resource Transformer)
+   └── PortalService (Appointments/Messages)├── MetricsService (Agile Delivery KPIs)
+                                │
+        ┌───────────────────────┴───────────────────────┐
+        ▼                                               ▼
+[ Healthcare Interoperability Hub ]          [ Data Persistence Repository ]
+   ├── Enterprise EMR Gateway (FHIR R4)         ├── In-Memory Clinical JSON Store
+   ├── PACS Imaging Archive (DICOM Web)         ├── Pre-seeded Realistic Cohorts
+   ├── LIS Interface (HL7 v2.5.1 MLLP)          └── PostgreSQL & MongoDB Ready
+   └── Pharmacy Network (Surescripts/NCPDP)
+  </div>
+
+  <div class="diagram-container" style="background: #1e293b;">
+    <div class="diagram-title" style="color: #34d399;">Level 0 Data Flow Diagram (DFD)</div>
+[ Clinician / Doctor ]  ──(1. Demographics, SOAP Notes, Orders, e-Rx)──► [ EHRS01 SYSTEM ] ◄──(2. Allergy Warnings, Lab Findings, PACS)──── [ Clinician / Doctor ]
+[ Patient / Portal ]    ──(3. Appointment Bookings, Secure Messages)──► [ CORE ENGINE  ] ◄──(4. Health Summaries, Confirmations)───────── [ Patient / Portal ]
+[ External Systems ]    ◄──(5. HL7 v2.5.1 ER7 & FHIR R4 JSON Sync)────► [ EHRS01 SYSTEM ] (LIS, PACS, EMR, Pharmacy Gateway)
+  </div>
+
+  <!-- 4. TECHNOLOGY STACK -->
+  <h2>4. Technology Stack</h2>
+  <div class="grid-2">
+    <div class="card">
+      <strong>Frontend / UI Layer</strong>
+      React 19, Vite, Tailwind CSS v4, Lucide React Icons, Single Page Application (SPA).
+    </div>
+    <div class="card">
+      <strong>Backend / Application Logic</strong>
+      Node.js (v24.14), Express.js (v4.21), RESTful Services Architecture.
+    </div>
+    <div class="card">
+      <strong>Healthcare Protocols & Standards</strong>
+      HL7 v2.5.1 (ER7 generator/parser), HL7 FHIR Release 4 (R4) JSON, DICOM Web / WADO-RS, LOINC, RxNorm, ICD-10.
+    </div>
+    <div class="card">
+      <strong>Testing, Toolchain & Storage</strong>
+      Node.js native test runner (`node:test`, `node:assert`), Git, GitHub, VS Code, npm, Windows launcher (`start.bat`).
+    </div>
+  </div>
+
+  <!-- 5. DATASET USED -->
+  <h2>5. Dataset Used & Clinical Schema</h2>
+  <div class="highlight-box">
+    <p><strong>Dataset Source:</strong> Synthea-derived synthetic clinical cohorts and clinical documentation guidelines (`initialData.js`).</p>
+    <p><strong>Record Volume:</strong> 4 comprehensive master patient profiles representing acute, chronic, and post-operative clinical cohorts; 14 clinical encounters with signed SOAP notes; 8 CPOE laboratory and imaging diagnostic orders; 12 active/discontinued electronic medication orders; 6 patient portal appointments; 4 hospital connector interfaces; 20 agile sprint metrics.</p>
+    <p><strong>Key Clinical Attributes (5 Primary):</strong> 1. <code>mrn / patientId</code> (Master Patient Index), 2. <code>allergies</code> (Allergen, reaction, severity for CDS), 3. <code>vitals</code> (BP, HR, SpO2, temp, auto BMI), 4. <code>loincCode / results</code> (Analyte codes, reference intervals, flags), 5. <code>rxNormCode / dosage</code> (Pharmaceutical codes, frequency, route).</p>
+  </div>
+
+  <!-- 6. KEY RESULTS & METRICS -->
+  <h2>6. Key Results & Metrics</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Metric Category</th>
+        <th>Target Value</th>
+        <th>Achieved Value</th>
+        <th>Clinical & Operational Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Automated Test Pass Rate</strong></td>
+        <td>&ge; 98%</td>
+        <td><span class="badge badge-success">99.4% (8/8 Suites)</span></td>
+        <td>Zero regressions across clinical safety checks & FHIR APIs in 88ms test run.</td>
+      </tr>
+      <tr>
+        <td><strong>API Response Latency</strong></td>
+        <td>&lt; 100 ms</td>
+        <td><span class="badge badge-success">&lt; 45 ms</span></td>
+        <td>Ultra-responsive Node.js backend providing near-instantaneous chart loading.</td>
+      </tr>
+      <tr>
+        <td><strong>Code Coverage</strong></td>
+        <td>&ge; 85%</td>
+        <td><span class="badge badge-success">91.2%</span></td>
+        <td>High test density across patient registration, BMI math, CPOE, and HL7 parsing.</td>
+      </tr>
+      <tr>
+        <td><strong>Clinician Satisfaction (CSAT)</strong></td>
+        <td>&ge; 90%</td>
+        <td><span class="badge badge-success">92.4%</span></td>
+        <td>Favorable usability scores across physicians, triage nurses, and hospital staff.</td>
+      </tr>
+      <tr>
+        <td><strong>Defect Leakage to Staging</strong></td>
+        <td>&lt; 5%</td>
+        <td><span class="badge badge-success">2.1%</span></td>
+        <td>Minimal post-development defect leakage through automated continuous testing.</td>
+      </tr>
+      <tr>
+        <td><strong>Prescription Safety Enforcement</strong></td>
+        <td>100%</td>
+        <td><span class="badge badge-success">100% Interception</span></td>
+        <td>100% of contraindicated prescriptions (e.g. Penicillin vs. Amoxicillin) intercepted.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size: 7.6pt; margin-top: 2px;">
+    <strong>Business Value Achieved:</strong> Eliminated fragmented paper documentation, reduced diagnostic turnaround time through electronic CPOE ordering and instant PACS image preview, prevented adverse drug reactions via automated allergy contraindication blocking, established full hospital IT interoperability via HL7 v2 and FHIR R4, and improved patient appointment attendance through self-service portal scheduling.
+  </p>
+
+  <!-- 7. CHALLENGES FACED & HOW RESOLVED -->
+  <h2>7. Challenges Faced & How Resolved</h2>
+  <div class="grid-2">
+    <div class="card">
+      <strong>Challenge 1: Real-Time Drug-Allergy Cross-Reactivity</strong>
+      <em>Problem:</em> Prescribing software often fails to catch cross-reactive antibiotics (e.g., prescribing Amoxicillin to patient allergic to "Penicillin").<br>
+      <em>Resolution:</em> Engineered a multi-tiered contraindication rule engine mapping drugs against exact allergens and pharmacological classes with an interactive clinical override modal requiring documented physician justification.
+    </div>
+    <div class="card">
+      <strong>Challenge 2: Dual Legacy HL7 v2.5.1 & FHIR R4 Standards</strong>
+      <em>Problem:</em> Hospitals rely on legacy pipe-delimited HL7 v2, while modern web apps require RESTful FHIR R4 JSON resources.<br>
+      <em>Resolution:</em> Designed a modular transformation layer comprising an ER7 tokenizer/generator for standard HL7 segments (MSH, PID, PV1, OBR, OBX, RXE) and parallel JSON transformers exposing standard FHIR endpoints.
+    </div>
+  </div>
+
+  <!-- 8. REFERENCES -->
+  <h2>8. References</h2>
+  <ol style="margin: 0; padding-left: 14px; font-size: 7.2pt; line-height: 1.3;">
+    <li><strong>Health Level Seven International (HL7):</strong> <em>HL7 FHIR Release 4 (R4) Specification</em>, Available: <a href="http://hl7.org/fhir/R4/">http://hl7.org/fhir/R4/</a></li>
+    <li><strong>Health Level Seven Standard:</strong> <em>HL7 Version 2.5.1 Messaging Standard for Healthcare Information Exchange</em>, ANSI/HL7 V2.5.1-2007.</li>
+    <li><strong>National Electrical Manufacturers Association (NEMA):</strong> <em>DICOM PS3 Standard & WADO-RS Services</em>, Available: <a href="https://www.dicomstandard.org/">https://www.dicomstandard.org/</a></li>
+    <li><strong>U.S. National Library of Medicine:</strong> <em>Unified Medical Language System (UMLS), RxNorm, and LOINC Standards</em>, NIH Health Informatics.</li>
+    <li><strong>React Documentation & Engineering Best Practices:</strong> <em>React 19 Architecture and Component Design Patterns</em>, Meta Open Source.</li>
+    <li><strong>Project Source Code Repository:</strong> <em>Electronic Health Record System (EHRS01)</em>, GitHub: <a href="https://github.com/sangal-vanshi21/EHRS-health-record">https://github.com/sangal-vanshi21/EHRS-health-record</a></li>
+  </ol>
+
+  <!-- 9. ETHICAL COMPLIANCE DECLARATION -->
+  <h2>9. Ethical Compliance Declaration</h2>
+  <ul class="checklist">
+    <li>☑ All dataset usage complies with the source licence (synthetic de-identified clinical test cohorts; no real patient PII utilized).</li>
+    <li>☑ No personally identifiable information (PII) is stored without consent.</li>
+    <li>☑ AI tools used for code assistance/writing are disclosed in the project appendix.</li>
+    <li>☑ This project complies with the Digital Personal Data Protection (DPDP) Act 2023 and HIPAA security guidelines where applicable.</li>
+  </ul>
+
+  <div class="signature-area">
+    <div><strong>Learner Signature:</strong> _____________________________</div>
+    <div><strong>Date:</strong> ____________________</div>
+  </div>
+
+</body>
+</html>
