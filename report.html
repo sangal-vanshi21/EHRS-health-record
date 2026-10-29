@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Project Synopsis — Electronic Health Record System (EHRS01)</title>
+  <title>Project Synopsis</title>
   <style>
     @page {
       size: A4;
@@ -18,7 +18,7 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       font-size: 8.2pt;
-      line-height: 1.34;
+      line-height: 1.35;
       color: #1e293b;
       margin: 0;
       padding: 0;
@@ -27,42 +27,24 @@
 
     .header-banner {
       border-bottom: 2px solid #1e40af;
-      padding-bottom: 4px;
+      padding-bottom: 5px;
       margin-bottom: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
     }
 
     .org-title {
-      font-size: 12.5pt;
+      font-size: 14pt;
       font-weight: 800;
       color: #1e40af;
       letter-spacing: -0.3px;
       margin: 0;
-    }
-
-    .sub-org {
-      font-size: 7.8pt;
-      font-weight: 600;
-      color: #64748b;
-      margin-top: 1px;
-    }
-
-    .doc-type {
-      text-align: right;
-      font-size: 7.2pt;
-      font-weight: 700;
-      color: #0f172a;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      text-transform: none;
     }
 
     .meta-table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 8px;
-      font-size: 7.8pt;
+      font-size: 8pt;
     }
 
     .meta-table th, .meta-table td {
@@ -88,7 +70,7 @@
       font-weight: 700;
       text-decoration: underline;
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 7.2pt;
+      font-size: 7.4pt;
     }
 
     h2 {
@@ -208,13 +190,39 @@
     }
 
     .signature-area {
-      margin-top: 8px;
+      margin-top: 10px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      font-size: 7.8pt;
-      padding-top: 5px;
+      align-items: flex-end;
+      font-size: 8pt;
+      padding-top: 6px;
       border-top: 1px dashed #cbd5e1;
+    }
+
+    .sig-block {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .signature-font {
+      font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;
+      font-size: 15pt;
+      color: #1e3a8a;
+      font-weight: 600;
+      border-bottom: 1.5px solid #1e3a8a;
+      padding-bottom: 1px;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .sig-date {
+      font-weight: 700;
+      color: #0f172a;
+      border-bottom: 1.5px solid #64748b;
+      padding-bottom: 1px;
+      display: inline-block;
+      font-size: 8.2pt;
     }
   </style>
 </head>
@@ -222,14 +230,7 @@
 
   <!-- HEADER -->
   <div class="header-banner">
-    <div>
-      <h1 class="org-title">HCLTech Career Shaper Programme</h1>
-      <div class="sub-org">III Year Industry Project | Academic Year 2025–26</div>
-    </div>
-    <div class="doc-type">
-      Official Submission<br>
-      <span style="color: #2563eb; font-weight: 800;">Project Synopsis</span>
-    </div>
+    <h1 class="org-title">HCLTech Career Shaper Programme</h1>
   </div>
 
   <!-- METADATA TABLE -->
@@ -252,19 +253,19 @@
       <th>Format</th>
       <td>Individual Project</td>
       <th>Submission Date</th>
-      <td>October 2026</td>
+      <td>25 Oct 2026</td>
     </tr>
     <tr>
       <th>Learner Name</th>
-      <td>[FILL IN: Your Full Name]</td>
+      <td><strong>Vanshika Sangal</strong></td>
       <th>Roll Number</th>
-      <td>[FILL IN: University Roll No.]</td>
+      <td><strong>2300320150068</strong></td>
     </tr>
     <tr>
       <th>College / Campus</th>
-      <td>[FILL IN: College / Campus Name]</td>
+      <td><strong>ABES Engineering College</strong></td>
       <th>Mentor Name</th>
-      <td>Gaurav Kumar (Project Manager / Mentor)</td>
+      <td><strong>Dr. Anamika Goel</strong></td>
     </tr>
   </table>
 
@@ -439,8 +440,14 @@
   </ul>
 
   <div class="signature-area">
-    <div><strong>Learner Signature:</strong> _____________________________</div>
-    <div><strong>Date:</strong> ____________________</div>
+    <div class="sig-block">
+      <strong>Learner Signature:</strong>
+      <span class="signature-font">Vanshika Sangal</span>
+    </div>
+    <div class="sig-block">
+      <strong>Date:</strong>
+      <span class="sig-date">25 Oct 2026</span>
+    </div>
   </div>
 
 </body>
